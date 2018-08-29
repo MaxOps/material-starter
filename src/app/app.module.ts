@@ -5,6 +5,8 @@ import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from './material.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,10 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
     HomeComponent,
   ],
   imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+
     BrowserModule.withServerTransition({appId: 'my-app'}),
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
